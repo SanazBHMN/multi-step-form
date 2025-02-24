@@ -2,8 +2,8 @@ import { FormWrapper } from "./FormWrapper";
 
 export const AddOnsForm = () => {
   let { title, description } = {
-    title: "pick add-ons",
-    description: "add-ons help enhance your gaming experience.",
+    title: "Pick add-ons",
+    description: "Add-ons help enhance your gaming experience.",
   };
 
   return (

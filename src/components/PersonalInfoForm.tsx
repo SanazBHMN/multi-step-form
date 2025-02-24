@@ -2,8 +2,8 @@ import { FormWrapper } from "./FormWrapper";
 
 export const PersonalInfoForm = () => {
   let { title, description } = {
-    title: "personal info",
-    description: "please provide your name, email address, and phone number",
+    title: "Personal info",
+    description: "Please provide your name, email address, and phone number.",
   };
 
   return (

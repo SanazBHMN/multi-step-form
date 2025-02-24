@@ -2,8 +2,8 @@ import { FormWrapper } from "./FormWrapper";
 
 export const PlanForm = () => {
   let { title, description } = {
-    title: "select your plan",
-    description: "you have the option of monthly or yearly billing.",
+    title: "Select your plan",
+    description: "You have the option of monthly or yearly billing.",
   };
 
   return (
