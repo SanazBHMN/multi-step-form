@@ -2,14 +2,18 @@
 import { useMultistepForm } from "./hooks/useMultistepForm";
 // components
 import { StepsList } from "./components/StepsList";
+import { PersonalInfoForm } from "./components/PersonalInfoForm";
+import { AddOnsForm } from "./components/AddOnsForm";
+import { PlanForm } from "./components/PlanForm";
+import { Summary } from "./components/Summary";
 
 function App() {
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } =
     useMultistepForm([
-      <div>ONE</div>,
-      <div>TWO</div>,
-      <div>THREE</div>,
-      <div>FOUR</div>,
+      <PersonalInfoForm />,
+      <PlanForm />,
+      <AddOnsForm />,
+      <Summary />,
     ]);
 
   return (
