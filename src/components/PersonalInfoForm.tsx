@@ -1,6 +1,13 @@
+import { FormWrapper } from "./FormWrapper";
+
 export const PersonalInfoForm = () => {
+  let { title, description } = {
+    title: "personal info",
+    description: "please provide your name, email address, and phone number",
+  };
+
   return (
-    <>
+    <FormWrapper title={title} description={description}>
       <label htmlFor="">Name</label>
       <input type="text" placeholder="e.g. Stephan King" autoFocus required />
 
@@ -9,6 +16,6 @@ export const PersonalInfoForm = () => {
 
       <label htmlFor="">Phone Number</label>
       <input type="tel" placeholder="e.g. +1 234 567 890" />
-    </>
+    </FormWrapper>
   );
 };
