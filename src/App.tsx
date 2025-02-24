@@ -1,12 +1,19 @@
-import { Step } from "./components/Step";
+// hooks
 import { useMultistepForm } from "./hooks/useMultistepForm";
+// components
+import { StepsList } from "./components/StepsList";
 
 function App() {
-  const { steps, currentStepIndex } = useMultistepForm([]);
+  const { steps, currentStepIndex } = useMultistepForm([
+    <div></div>,
+    <div></div>,
+    <div></div>,
+    <div></div>,
+  ]);
 
   return (
     <div>
-      <Step stepNumber={currentStepIndex + 1} stepTitle="your info" />
+      <StepsList steps={steps} />
     </div>
   );
 }
