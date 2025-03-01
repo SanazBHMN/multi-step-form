@@ -21,7 +21,7 @@ export const StepsList = ({ steps }: StepsListProps) => {
       />
       <img src={desktopBackground} className="hidden sm:block" alt="" />
       <ol
-        className={`absolute top-[50%] left-[50%] flex -translate-1/2 justify-center gap-4 sm:top-36 sm:left-24 sm:flex-col`}
+        className={`absolute top-[30%] left-[50%] flex -translate-1/2 justify-center gap-4 sm:top-36 sm:left-24 sm:flex-col`}
       >
         {steps.map((_, index) => (
           <Step

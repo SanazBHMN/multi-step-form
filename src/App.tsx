@@ -19,16 +19,16 @@ function App() {
   return (
     <div>
       <StepsList steps={steps} />
-      <form>
+      <form className="absolute top-25 right-0 left-0 mx-auto w-11/12 rounded-lg bg-white px-5 py-8 shadow-2xs">
         {step}
-        {!isFirstStep && (
+        {/* {!isFirstStep && (
           <button type="button" onClick={back}>
             Go Back
           </button>
         )}
         <button type="button" onClick={next}>
           {isLastStep ? "Confirm" : "Next Step"}
-        </button>
+        </button> */}
       </form>
     </div>
   );
