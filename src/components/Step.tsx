@@ -14,8 +14,8 @@ export const Step = ({ stepNumber, stepTitle, isStepActive }: StepProps) => {
       </div>
       {stepTitle && (
         <div className="hidden flex-col sm:flex">
-          <p>STEP {stepNumber}</p>
-          <p className="uppercase">{stepTitle}</p>
+          <p className="text-light-gray font-light">STEP {stepNumber}</p>
+          <p className="uppercase text-white">{stepTitle}</p>
         </div>
       )}
     </li>

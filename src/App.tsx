@@ -20,9 +20,9 @@ function App() {
   // console.log(steps);
 
   return (
-    <div>
+    <div className="items-center justify-center md:flex">
       <StepsList steps={steps} currentStepIndex={currentStepIndex} />
-      <form className="absolute top-25 right-0 left-0 mx-auto w-11/12 rounded-lg bg-white px-5 py-8 shadow-2xs">
+      <form className="absolute top-25 right-0 left-0 mx-auto w-11/12 rounded-lg bg-white px-5 py-8 shadow-2xs sm:relative">
         {step}
         {!isFirstStep && (
           <button type="button" onClick={back}>
