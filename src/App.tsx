@@ -16,9 +16,12 @@ function App() {
       <Summary />,
     ]);
 
+  // console.log(currentStepIndex);
+  // console.log(steps);
+
   return (
     <div>
-      <StepsList steps={steps} />
+      <StepsList steps={steps} currentStepIndex={currentStepIndex} />
       <form className="absolute top-25 right-0 left-0 mx-auto w-11/12 rounded-lg bg-white px-5 py-8 shadow-2xs">
         {step}
         {!isFirstStep && (

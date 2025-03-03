@@ -7,9 +7,10 @@ import desktopBackground from "../assets/images/bg-sidebar-desktop.svg";
 
 interface StepsListProps {
   steps: ReactElement[];
+  currentStepIndex: number;
 }
 
-export const StepsList = ({ steps }: StepsListProps) => {
+export const StepsList = ({ steps, currentStepIndex }: StepsListProps) => {
   const stepTitles = ["your info", "select plan", "add-ons", "summary"];
 
   return (
@@ -28,6 +29,7 @@ export const StepsList = ({ steps }: StepsListProps) => {
             key={index}
             stepNumber={index + 1}
             stepTitle={stepTitles[index]}
+            isStepActive={currentStepIndex === index}
           />
         ))}
       </ol>

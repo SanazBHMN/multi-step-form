@@ -28,6 +28,7 @@ export const useMultistepForm = (steps: ReactElement[]) => {
     currentStepIndex,
     step: steps[currentStepIndex],
     steps,
+    // activeStep: step[currentStepIndex] === step ,
     isFirstStep: currentStepIndex === 0,
     isLastStep: currentStepIndex === steps.length - 1,
     next,
