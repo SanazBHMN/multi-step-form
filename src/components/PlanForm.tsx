@@ -1,11 +1,15 @@
 // components
 import { FormWrapper } from "./FormWrapper";
+import { Toggle } from "./Toggle";
 // statics
 import arcade from "../assets/icons/icon-arcade.svg";
 import advanced from "../assets/icons/icon-advanced.svg";
 import pro from "../assets/icons/icon-pro.svg";
+import { useState } from "react";
 
 export const PlanForm = () => {
+  const [isMonthlySelected, setIsMonthlySelected] = useState(false);
+
   let { title, description } = {
     title: "Select your plan",
     description: "You have the option of monthly or yearly billing.",
@@ -30,7 +34,12 @@ export const PlanForm = () => {
             <img src={arcade} alt="" />
             <div className="block">
               <div className="w-full text-lg font-semibold">Arcade</div>
-              <div className="w-full text-sm">$9/mo</div>
+              <div className="w-full text-sm">
+                {isMonthlySelected ? "$9/mo" : "$90/yr"}
+              </div>
+              {!isMonthlySelected && (
+                <div className="w-full text-sm">2 months free</div>
+              )}
             </div>
           </label>
         </li>
@@ -50,7 +59,12 @@ export const PlanForm = () => {
             <img src={advanced} alt="" />
             <div className="block">
               <div className="w-full text-lg font-semibold">Advanced</div>
-              <div className="w-full text-sm">$12/mo</div>
+              <div className="w-full text-sm">
+                {isMonthlySelected ? "$12/mo" : "$120/yr"}
+              </div>
+              {!isMonthlySelected && (
+                <div className="w-full text-sm">2 months free</div>
+              )}
             </div>
           </label>
         </li>
@@ -70,11 +84,20 @@ export const PlanForm = () => {
             <img src={pro} alt="" />
             <div className="block">
               <div className="w-full text-lg font-semibold">Pro</div>
-              <div className="w-full text-sm">$15/mo</div>
+              <div className="w-full text-sm">
+                {isMonthlySelected ? "$15/mo" : "$150/yr"}
+              </div>
+              {!isMonthlySelected && (
+                <div className="w-full text-sm">2 months free</div>
+              )}
             </div>
           </label>
         </li>
       </ul>
+      <Toggle
+        value={isMonthlySelected}
+        onChange={() => setIsMonthlySelected(!isMonthlySelected)}
+      />
     </FormWrapper>
   );
 };
